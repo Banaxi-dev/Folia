@@ -68,6 +68,15 @@ Additionally, the above is all a rough guess based on player count, but
 it is very likely that the thread allocation will not be ideal, and you 
 will need to tune it based on usage of the threads that you end up seeing.
 
+How To (Compiling Jar From Source)
+------
+This Repository Is Made to distribute the compiled Version Of Folia, But If you still want to compile it here is a tutorial.
+To compile Folia, you need JDK 21 and an internet connection.
+
+Clone this repo, run `./gradlew applyPatches`, then `./gradlew createMojmapBundlerJar` from your terminal. You can find the compiled jar in the `folia-server/build/libs` directory.
+
+To get a full list of tasks, run `./gradlew tasks`.
+
 ## Plugin compatibility
 
 There is no more main thread. I expect _every_ single plugin
@@ -77,6 +86,8 @@ possible race conditions in plugin held data - so, there are bound
 to be changes that need to be made.
 
 So, have your expectations for compatibility at 0.
+
+But Im also Working on a bit BackwardsCompatibilitiy in this Fork
 
 ## API plans
 
